@@ -1,0 +1,105 @@
+#beliefs .container .row {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+  }
+  
+  #beliefs .container .col {
+    flex: 1 1 33%; /* Default: 3 cards in a row */
+  }
+  
+  @media (max-width: 400px) {
+    #beliefs .container .col {
+      flex: 1 1 100%; /* Each card takes full width below 400px */
+    }
+  
+    #beliefs .container .col:nth-child(2),
+    #beliefs .container .col:nth-child(3) {
+      margin-top: 1rem; /* Adds spacing for better alignment */
+    }
+  }
+
+
+  /* cards */
+  /* Default styling for images */
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image fits nicely */
+}
+
+/* Media query for screens greater than 770px and less than 1200px */
+@media (min-width: 768px) and (max-width: 1200px) {
+
+  #beliefs .card img {
+    height: 100%; /* Ensures the image fully occupies its parent container */
+    object-fit: cover; /* Maintain aspect ratio while covering the area */
+  }
+
+  #beliefs .card {
+    max-width: 480px; /* Adjust card width for better layout in this range */
+    margin: auto; /* Centers the card within the column */
+  }
+
+  #beliefs .row {
+    justify-content: center; /* Ensures cards align nicely in the row */
+    gap: 1rem; /* Adds space between cards for readability */
+  }
+}
+
+  /* for fixing nav at the top on large devices */
+  @media (min-width: 768px) {
+    .nav {
+      position: fixed;
+      z-index: 2;
+      width: 100vw;
+    }
+  }
+  @media (max-width: 612px) {
+    /* Styles for devices with width less than 612px */
+   h1{
+    font-size: 6rem;
+   }
+  }
+  @media (max-width: 584px) {
+    /* Styles for devices with width less than 612px */
+   h1{
+    font-size: 5rem;
+   }
+   h3{
+    font-size: 2rem;
+   }
+   h4{
+    font-size: 1.5rem;
+   }
+   .contact__form{
+    width: 100%;
+   }
+  }
+  @media (max-width: 472px) {
+ 
+    h1{
+      font-size: 5rem;
+     }
+     h3{
+      font-size: 1.5rem;
+     }
+     h4{
+      font-size: 1rem;
+     }
+  }
+  @media (max-width: 320px) {
+    h1{
+      font-size: 4rem;
+     }
+  }
+
+  @media (min-width: 768px) {
+    .admin-signin-form{
+      width:50% ;
+    }
+  }
+  @media (min-width: 768px) {
+    .admin-form{
+      width:50% ;
+    }
+  }
